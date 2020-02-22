@@ -9,9 +9,9 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.layers import Embedding, LSTM, Dense, Bidirectional, Dropout
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-max_len = 512
+max_len = 256
 vocab_size = 10000
-embedding_dims = 256
+embedding_dims = 128
 batch_size = 32
 epochs = 5
 
@@ -45,7 +45,7 @@ x_train, x_val, y_train, y_val = train_test_split(x_train_data, y_train_data)
 
 model = Sequential()
 model.add(Embedding(vocab_size, embedding_dims, input_length = max_len))
-model.add(Bidirectional(LSTM(256, dropout=0.2, recurrent_dropout=0.2, return_sequences=True)))
+model.add(Bidirectional(LSTM(128, dropout=0.2, recurrent_dropout=0.2, return_sequences=True)))
 model.add(LSTM(128, dropout=0.2))
 model.add(Dense(64, activation='relu'))
 model.add(Dropout(0.5))

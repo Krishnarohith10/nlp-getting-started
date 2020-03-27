@@ -16,4 +16,7 @@ This dataset was created by the company figure-eight and originally shared on th
 
 Tweet source: https://twitter.com/AnyOtherAnnaK/status/629195955506708480
 
+Please find link below for this competition:  
+https://www.kaggle.com/c/nlp-getting-started
+
 Thank You for watching this repository and Appreciate your view.
